@@ -46,7 +46,8 @@
 
                 </div>
                 <div id="map-controls">
-                    <input type="range" width="100%"></input>
+                    <input id="map-date-slider" type="range" width="100%" onchange="change_date()"></input>
+                    <div id="map-date-slider-info"></div>
                 </div>
 
             </div>
@@ -55,7 +56,10 @@
             <div id="info">
                 Made using d3.js, Leaflet.js, p5.js <span> &#164; </span> Omkar Bhatt
             </div>
-            <script>draw_map()</script>
+            <script>
+                draw_map();
+                setup_map();
+            </script>
         </div>
 
     </body>

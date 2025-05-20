@@ -1,3 +1,8 @@
+// Define layers for assigning shapes
+var borderMark_Layer;
+var conflictMark_Layer;
+var map;
+
 
 function draw_map(){
 
@@ -14,8 +19,8 @@ function draw_map(){
   });
 
   // make layer grousp for the markers - visist and images
-  var borderMark_Layer = L.featureGroup();
-  var conflictMark_Layer = L.featureGroup();
+  borderMark_Layer = L.featureGroup();
+  conflictMark_Layer = L.featureGroup();
 
   // create dictionaries for baseMaps - in this case only the default map
   // this is a neede variable while making a layer control
@@ -29,7 +34,7 @@ function draw_map(){
   };
 
   // initiate the map and select default map tile and selected checkboxes
-  var map = L.map('map',{
+  map = L.map('map',{
     zoom: 10,
     layers: [def_Map, borderMark_Layer, conflictMark_Layer]
   });
@@ -52,22 +57,6 @@ function draw_map(){
   // a list to store all coordinates which can be converted to a polyline eventually
   var routeCoordinates = [];
   i = 0;
-
-  // Generate the points of conflict
-  d3.csv("data/info25/conflicts.csv", function(err, data) {
-    data.forEach(function(d) {
-      
-      var c_col = 'red'
-      if (d.By == 'Indian Armed Forces'){
-        c_col = 'orange';
-      }
-      else if(d.By == 'Pakistan Army - Shelling'){
-        c_col = 'green';
-      }
-      var marker = L.circle([d.loc_x, d.loc_y], 4000,{color: c_col}).addTo(conflictMark_Layer);
-        marker.bindTooltip(d.LocName);
-    });    
-  });
 
   var list = []
   d3.csv("data/country_shapes/pak.csv", function(err, data) {
@@ -107,6 +96,83 @@ function draw_map(){
   map.fitBounds(L.latLngBounds([36.5, 67],[30, 81]));
   map.setMaxBounds(map.getBounds());
   
+
+}
+
+var conficts_data, selected_date, date_range_list;
+var temp;
+function setup_map(){
+  var inputDateRange = document.getElementById("map-date-slider");
+  var inputDateInfo = document.getElementById("map-date-slider-info");
+  if (conficts_data){
+    // get the unique dates from data
+    date_range_list = d3.map(conficts_data, function(d){return(d.Date)}).keys();
+    date_range_list.push('All')
+
+    // set the limits for range
+    inputDateRange.setAttribute("min", 0); 
+    inputDateRange.setAttribute("max", date_range_list.length-1); 
+    // set the slider value for display
+    date_range_list.forEach(function(d){
+      const dateName = document.createElement('p');
+      dateName.classList.add("map-date-slider-name");
+      dateName.textContent = d;
+      inputDateInfo.appendChild(dateName);
+    });
+    inputDateRange.value = 0;
+    change_date();
+  }
+  else{
+    // assign global UI control variables
+    d3.csv("data/info25/conflicts.csv",function(data) {
+      conficts_data = data
+      console.log("Data-Read");
+      setup_map();
+    });
+  }
+}
+
+function change_date(){
+
+  // Remove revious conflicts if any
+  conflictMark_Layer.clearLayers();
+  //get the current date selected
+  var inputDateRange = document.getElementById("map-date-slider");
+  var cons;
+  selected_date = date_range_list[inputDateRange.value];
+  // Generate the points of conflict
+  if (selected_date != "All"){
+    var cons = conficts_data.filter(function(d){ return d.Date == selected_date });
+  }
+  else{
+    var cons = conficts_data;
+  }
+  
+  // draw each conflict as a circle
+  cons.forEach(function(d) {
+    var c_col = 'red'
+    if (d.By == 'Indian Armed Forces'){
+      c_col = 'orange';
+    }
+    else if(d.By.includes("Pakistan Army")){
+      c_col = 'green';
+    }
+    var marker = L.circle([d.loc_x, d.loc_y], 4000,{color: c_col}).addTo(conflictMark_Layer);
+      marker.bindTooltip(d.LocName);
+  });
+
+  // get bounds of current dataset
+  lat_min = d3.min(cons, function(d) { return d.loc_y; });
+  lat_max = d3.max(cons, function(d) { return d.loc_y; });
+  long_min = d3.min(cons, function(d) { return d.loc_x; });
+  long_max = d3.max(cons, function(d) { return d.loc_x; });
+  
+  // set default settings for the map including bounds, active layers
+  console.log(conflictMark_Layer.getBounds());
+  console.log([long_min, lat_min],[long_max, lat_max]);
+  // map.fitBounds(conflictMark_Layer.getBounds(), { padding: [50, 50] } );
+  map.fitBounds(L.latLngBounds([long_min, lat_min],[long_max, lat_max],{ padding: [500, 50] }));
+  map.setMaxBounds(map.getBounds());
 
 }
 

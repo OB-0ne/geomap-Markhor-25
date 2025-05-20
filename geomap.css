@@ -105,9 +105,26 @@
 /* Map Controls UI */
 
 #map-controls {
-    width: 100%;
+    max-width: 100%;
 }
 
 #map-date-slider{
-    width: inherit;
+    width: 84%;
+    margin: 0 8%;
+}
+
+#map-date-slider-info{
+    display: inline-block;
+    width: 100%;
+}
+
+.map-date-slider-name{
+    display: inline-block;
+    width: 16%;
+    text-align: center;
+    padding: 3px;
+}
+
+#map{
+    transition-duration: display 200ms;
 }
