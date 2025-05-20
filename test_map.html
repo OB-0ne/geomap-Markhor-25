@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="scripts/ui_utils.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <title>Markhor25</title>
+        <link rel="icon" type="image/x-icon" href="icons/brownie_cat.ico">
+        <!-- d3 libraries -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!-- leaflet libraries -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+        <script src='geomap.js'></script>
+        <link rel="stylesheet" href="geomap.css">
+        <!-- Leaflet Routing Machine -->
+        <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+        <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    </head>
+
+    <body>
+
+        <div id="main-back">
+    
+            <div id='main_body'>
+
+                <!-- THE MAP LAYER -->
+                <div id='map' style='width: 100%; height: 800px;'>
+
+                    <div class="info-icon" onclick="toggleGeomapInfoPopup()">
+                        <img src="icons/map/info-icon.png" height="30px" width="30px"></img>
+                    </div>
+
+                    <!-- MAP POP-UP INFO -->
+                    <div id="info-popup" class="info-popup">
+                        <div class="close-btn" onclick="toggleGeomapInfoPopup()">
+                            <img src="icons/map/popup-close.png" height="50px" width="50px"></img>
+                        </div>
+                        <div id="info-popup-content">
+                            <h2>Title</h2>
+                            <p>P1</p>
+                            <p>P2</p>
+                            <p><u>Disclaimer</u>: P3</p>
+                            <p>Thank you for being here and supporting me my tiny projects. :)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        <div id='footer'>
+            <div id="info">
+                Made using d3.js, Leaflet.js, p5.js <span> &#164; </span> Omkar Bhatt
+            </div>
+            <script>draw_map()</script>
+        </div>
+
+    </body>
+</html> 
