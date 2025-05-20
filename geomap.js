@@ -14,8 +14,8 @@ function draw_map(){
   });
 
   // make layer grousp for the markers - visist and images
-  var imgMark_Layer = L.featureGroup();
-  var visitMark_Layer = L.featureGroup();
+  var borderMark_Layer = L.featureGroup();
+  var conflictMark_Layer = L.featureGroup();
 
   // create dictionaries for baseMaps - in this case only the default map
   // this is a neede variable while making a layer control
@@ -24,14 +24,14 @@ function draw_map(){
   }
   // create a dictionary for different overlays - these will appear as checkbox
   var overlays = {
-    "Visits": visitMark_Layer,
-    "Photos": imgMark_Layer
+    "Conflicts": conflictMark_Layer,
+    "Borders": borderMark_Layer
   };
 
   // initiate the map and select default map tile and selected checkboxes
   var map = L.map('map',{
     zoom: 10,
-    layers: [def_Map, visitMark_Layer, imgMark_Layer]
+    layers: [def_Map, borderMark_Layer, conflictMark_Layer]
   });
 
   // initialize the control which can be interacted with
@@ -53,38 +53,55 @@ function draw_map(){
   var routeCoordinates = [];
   i = 0;
 
-  // Generate the points of interest from the trip GPS info
+  // Generate the points of conflict
   d3.csv("data/info25/conflicts.csv", function(err, data) {
-    console.log(data)
     data.forEach(function(d) {
       
       var c_col = 'red'
       if (d.By == 'Indian Armed Forces'){
         c_col = 'orange';
       }
-      else if(d.By == 'Pakistan Army'){
+      else if(d.By == 'Pakistan Army - Shelling'){
         c_col = 'green';
       }
-      var marker = L.circle([d.loc_x, d.loc_y], 4000,{color: c_col}).addTo(visitMark_Layer);
+      var marker = L.circle([d.loc_x, d.loc_y], 4000,{color: c_col}).addTo(conflictMark_Layer);
         marker.bindTooltip(d.LocName);
-    });
-    
-    var trip_line = L.polyline(routeCoordinates, {color: 'blue', className: 'day0'}).addTo(map);
-    
+    });    
   });
 
-  // Generate the points of interest from trip images
-  // d3.csv("data/trip_imageinfo.csv", function(err, img_data) {
-  //   img_data.forEach(function(d) {
-  //     var marker = L.marker([d.latitude, d.longitude], {icon: imageMarker, class: 'abc'}).addTo(imgMark_Layer); 
-  //     const popupContent = `
-  //         <div>
-  //           <img src="${"data/image_content/trip/" + d.filename}" class="geomap_marker_trip_image" />
-  //         </div>
-  //       `;
-  //       marker.bindPopup(popupContent);
-  //   });
-  // });
+  var list = []
+  d3.csv("data/country_shapes/pak.csv", function(err, data) {
+    
+    // make the polygon point list
+    list = []
+    data.forEach(function(d) {
+      list.push([d.lat,d.long])
+    });
+    
+    L.polygon(list, {color: 'green'}).addTo(borderMark_Layer);
+  });
+
+  d3.csv("data/country_shapes/ind.csv", function(err, data) {
+    
+    // make the polygon point list
+    list = []
+    data.forEach(function(d) {
+      list.push([d.lat,d.long])
+    });
+    
+    L.polygon(list, {color: 'orange'}).addTo(borderMark_Layer);
+  });
+
+  d3.csv("data/country_shapes/pok.csv", function(err, data) {
+    
+    // make the polygon point list
+    list = []
+    data.forEach(function(d) {
+      list.push([d.lat,d.long])
+    });
+    
+    L.polygon(list, {color: 'black'}).addTo(borderMark_Layer);
+  });
 
   // set default settings for the map including bounds, active layers
   map.fitBounds(L.latLngBounds([36.5, 67],[30, 81]));

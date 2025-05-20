@@ -101,3 +101,13 @@
         max-height: 65vw;
     }
 }
+
+/* Map Controls UI */
+
+#map-controls {
+    width: 100%;
+}
+
+#map-date-slider{
+    width: inherit;
+}
