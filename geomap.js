@@ -215,4 +215,5 @@ function toggleGeomapInfoPopup() {
 // Show popup on page load
 window.onload = function() {
   document.getElementById('info-popup').classList.remove('hidden');
+  L.DomEvent.disableScrollPropagation(document.getElementById('info-popup-byDate'));
 };
