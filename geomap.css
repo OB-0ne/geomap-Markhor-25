@@ -47,6 +47,36 @@
     z-index: 1001;
 }
 
+/* Specific UI for the info panel on top of map */
+
+#info-popup-byDate{
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 4px;
+    width: 28%;
+    height: 80%;
+    top: 10%;
+    overflow-y: scroll;
+    align-items: normal;
+    justify-content: left;
+}
+
+#info-popup-byDate-content p, #info-popup-byDate-content h2{
+    overflow-wrap: anywhere;
+    padding: 1px;
+    margin: 4px 2px;
+}
+
+.info-popup-paragraph{
+    font-size: 1em;
+}
+
+.info-popup-cities{
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+
 /* Hidden state for popup */
 .hidden {
     display: none;
@@ -100,6 +130,12 @@
     .geomap_marker_trip_image {
         max-height: 65vw;
     }
+    #info-popup-byDate{
+        height: 25%;
+        width: 94%;
+        top: 70%;
+        margin: 10px;
+    }
 }
 
 /* Map Controls UI */
@@ -127,4 +163,12 @@
 
 #map{
     transition-duration: display 200ms;
+}
+
+/* Tooltip CSS */
+.leaflet-tooltip{
+    font-size: 1.2rem;
+    padding: 6px;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }

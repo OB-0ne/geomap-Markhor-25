@@ -2,14 +2,15 @@
 var borderMark_Layer;
 var conflictMark_Layer;
 var map;
-
+var userIsPhone = false;
 
 function draw_map(){
 
-  let custom_map_height = window.innerHeight - 120;
+  let custom_map_height = window.innerHeight - 115;
   // add a check to see if user is on mobile and set a different map height accordingly
   if (window.innerWidth<=768){
-    custom_map_height = custom_map_height - 95;
+    custom_map_height = custom_map_height - 60;
+    userIsPhone = true;
   }
   document.getElementById('map').setAttribute("style","height:"+(custom_map_height)+"px");
 
@@ -69,7 +70,7 @@ function setup_map(){
     });
     inputDateRange.value = 0;
 
-    makeBoundaryPoly()
+    makeBoundaryPoly();
     change_date();
   }
   else{
@@ -157,7 +158,49 @@ function change_date(){
   
   // set default settings for the map including bounds, active layers
   buffer = 0.7
-  map.fitBounds(L.latLngBounds([long_min-buffer, lat_min-buffer],[Number(long_max)+buffer, Number(lat_max)+buffer]));
+  if (userIsPhone){
+    map.fitBounds(L.latLngBounds([long_min-2*buffer, lat_min-buffer],[Number(long_max)+buffer, Number(lat_max)+buffer]));
+  } else{
+    map.fitBounds(L.latLngBounds([long_min-buffer, lat_min-2*buffer],[Number(long_max)+buffer, Number(lat_max)+buffer]));
+  }
+
+  // Set the text for info pop-up
+  var popup_info_byDate = document.getElementById("info-popup-byDate-content");
+  var temp_element;
+
+  
+  // Remoive any previous text in the div
+  popup_info_byDate.innerHTML = '';
+
+  // Add a title as the selected date and add it to div
+  temp_element = document.createElement('h2');
+  temp_element.innerHTML = selected_date;
+  popup_info_byDate.appendChild(temp_element);
+
+  // make a dictionary where repeated decription is the key and cities as the list of values
+  let popup_info_dict = new Map();
+  cons.forEach(function(d){    
+    if(popup_info_dict.get(d.desc)){
+      popup_info_dict.get(d.desc).push(d.LocName)
+    }else{
+      popup_info_dict.set(d.desc,[d.LocName])
+    }    
+  });
+
+  // convert the dictionary to list to append all info the div
+  popup_info_dict.entries().forEach(function(d){
+    
+    temp_element = document.createElement('p');
+    temp_element.classList.add('info-popup-paragraph');
+    temp_element.innerHTML = d[0];            // the key is stored on index 0
+    popup_info_byDate.appendChild(temp_element);
+
+    temp_element = document.createElement('p');
+    temp_element.classList.add('info-popup-cities');
+    temp_element.innerHTML = d[1].join(", ");            // the list of values is stored on index 1
+    popup_info_byDate.appendChild(temp_element);
+
+  });
 
 }
 
@@ -165,6 +208,8 @@ function change_date(){
 function toggleGeomapInfoPopup() {
   const infoPopup = document.getElementById('info-popup');
   infoPopup.classList.toggle('hidden');
+  document.getElementById('info-popup-byDate').classList.toggle('hidden');
+
 }
 
 // Show popup on page load
