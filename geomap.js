@@ -15,7 +15,9 @@ function draw_map(){
 
   // Add a tile layer (you can change to other providers if needed)
   var def_Map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
+    attribution: '© OpenStreetMap contributors',
+    zoomSnap: 0.1,
+    maxZoom: 11
   });
 
   // make layer grousp for the markers - visist and images
@@ -35,28 +37,52 @@ function draw_map(){
 
   // initiate the map and select default map tile and selected checkboxes
   map = L.map('map',{
-    zoom: 10,
     layers: [def_Map, borderMark_Layer, conflictMark_Layer]
   });
 
   // initialize the control which can be interacted with
   var layerControl = L.control.layers(baseMaps,overlays).addTo(map);
 
+    
 
-  // initiate the icons which will be used for the markers
-  var imageMarker = new L.icon({
-    iconUrl: 'icons/map/image-marker.png',
-    iconSize: [60,60]
-  });
+}
 
-  var poiMarker = new L.icon({
-    iconUrl: 'icons/map/poi-marker.png',
-    iconSize: [60,60]
-  });  
+var conficts_data, selected_date, date_range_list;
+var temp;
+function setup_map(){
+  var inputDateRange = document.getElementById("map-date-slider");
+  var inputDateInfo = document.getElementById("map-date-slider-info");
+  if (conficts_data){
+    // get the unique dates from data
+    date_range_list = d3.map(conficts_data, function(d){return(d.Date)}).keys();
+    date_range_list.push('All')
 
-  // a list to store all coordinates which can be converted to a polyline eventually
-  var routeCoordinates = [];
-  i = 0;
+    // set the limits for range
+    inputDateRange.setAttribute("min", 0); 
+    inputDateRange.setAttribute("max", date_range_list.length-1); 
+    // set the slider value for display
+    date_range_list.forEach(function(d){
+      const dateName = document.createElement('p');
+      dateName.classList.add("map-date-slider-name");
+      dateName.textContent = d;
+      inputDateInfo.appendChild(dateName);
+    });
+    inputDateRange.value = 0;
+
+    makeBoundaryPoly()
+    change_date();
+  }
+  else{
+    // assign global UI control variables
+    d3.csv("data/info25/conflicts.csv",function(data) {
+      conficts_data = data
+      console.log("Data-Read");
+      setup_map();
+    });
+  }
+}
+
+function makeBoundaryPoly(){
 
   var list = []
   d3.csv("data/country_shapes/pak.csv", function(err, data) {
@@ -91,45 +117,7 @@ function draw_map(){
     
     L.polygon(list, {color: 'black'}).addTo(borderMark_Layer);
   });
-
-  // set default settings for the map including bounds, active layers
-  map.fitBounds(L.latLngBounds([36.5, 67],[30, 81]));
-  map.setMaxBounds(map.getBounds());
   
-
-}
-
-var conficts_data, selected_date, date_range_list;
-var temp;
-function setup_map(){
-  var inputDateRange = document.getElementById("map-date-slider");
-  var inputDateInfo = document.getElementById("map-date-slider-info");
-  if (conficts_data){
-    // get the unique dates from data
-    date_range_list = d3.map(conficts_data, function(d){return(d.Date)}).keys();
-    date_range_list.push('All')
-
-    // set the limits for range
-    inputDateRange.setAttribute("min", 0); 
-    inputDateRange.setAttribute("max", date_range_list.length-1); 
-    // set the slider value for display
-    date_range_list.forEach(function(d){
-      const dateName = document.createElement('p');
-      dateName.classList.add("map-date-slider-name");
-      dateName.textContent = d;
-      inputDateInfo.appendChild(dateName);
-    });
-    inputDateRange.value = 0;
-    change_date();
-  }
-  else{
-    // assign global UI control variables
-    d3.csv("data/info25/conflicts.csv",function(data) {
-      conficts_data = data
-      console.log("Data-Read");
-      setup_map();
-    });
-  }
 }
 
 function change_date(){
@@ -168,11 +156,8 @@ function change_date(){
   long_max = d3.max(cons, function(d) { return d.loc_x; });
   
   // set default settings for the map including bounds, active layers
-  console.log(conflictMark_Layer.getBounds());
-  console.log([long_min, lat_min],[long_max, lat_max]);
-  // map.fitBounds(conflictMark_Layer.getBounds(), { padding: [50, 50] } );
-  map.fitBounds(L.latLngBounds([long_min, lat_min],[long_max, lat_max],{ padding: [500, 50] }));
-  map.setMaxBounds(map.getBounds());
+  buffer = 0.7
+  map.fitBounds(L.latLngBounds([long_min-buffer, lat_min-buffer],[Number(long_max)+buffer, Number(lat_max)+buffer]));
 
 }
 
