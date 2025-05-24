@@ -64,7 +64,11 @@
 #info-popup-byDate-content p, #info-popup-byDate-content h2{
     overflow-wrap: anywhere;
     padding: 1px;
-    margin: 4px 2px;
+    margin: 8px 5px;
+}
+
+#info-popup-byDate-content h2{
+    align-items: center;
 }
 
 .info-popup-paragraph{

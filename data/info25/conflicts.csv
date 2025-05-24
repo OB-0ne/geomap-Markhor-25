@@ -1,70 +1,70 @@
 No,Date,Time,LocName,By,On,confirmed_opp,loc_x,loc_y,desc
-1,22-Apr-25,13:30,Pahalgam,Terrorists,India,TRUE,34.0068,75.3287,A
-2,07-May-25,01:20,Sawai Nala camp - Muzaffarabad,Indian Armed Forces,Terror Camps,TRUE,34.3472,73.5313,B
-3,07-May-25,01:20,Syedna Bilal camp - Muzaffarabad,Indian Armed Forces,Terror Camps,TRUE,34.3722,73.5063,B
-4,07-May-25,01:20,Abbas camp - Kotli,Indian Armed Forces,Terror Camps,TRUE,33.5218,73.8908,C
-5,07-May-25,01:20,Gulpur - Kotli,Indian Armed Forces,Terror Camps,TRUE,33.5468,73.8658,C
-6,07-May-25,01:20,Bahawalpur ,Indian Armed Forces,Terror Camps,TRUE,29.134,71.3165,D
-7,07-May-25,01:20,Muridke,Indian Armed Forces,Terror Camps,TRUE,31.8158,74.3059,E
-8,07-May-25,01:20,Barnala camp in Bhimber ,Indian Armed Forces,Terror Camps,,32.8639,74.2488,B
-9,07-May-25,01:20,Mehmoona Joya camp - Sialkot,Indian Armed Forces,Terror Camps,,32.5792,74.4938,A
-10,07-May-25,01:20,Sarjal camp - Shakargarh,Indian Armed Forces,Terror Camps,,32.2519,75.1377,B
-11,07-May-25,20:30,Srinagar,Pakistan Army - Drone/Missle,India,,34.0783,74.7769,A
-12,07-May-25,20:30,Awantipora,Pakistan Army - Drone/Missle,India,,33.9147,75.0152,E
-13,07-May-25,20:30,Jammu,Pakistan Army - Drone/Missle,India,,32.7077,74.8737,C
-14,07-May-25,20:30,Pathankhot,Pakistan Army - Drone/Missle,India,,32.2635,75.6378,B
-15,07-May-25,20:30,Kapurthala,Pakistan Army - Drone/Missle,India,,31.371,75.394,B
-16,07-May-25,20:30,Adampur,Pakistan Army - Drone/Missle,India,,31.4363,75.7142,E
-17,07-May-25,20:30,Jalandhar,Pakistan Army - Drone/Missle,India,,31.2906,75.607,E
-18,07-May-25,20:30,Amritsar,Pakistan Army - Drone/Missle,India,,31.638,74.8282,B
-19,07-May-25,20:30,Ludhiana,Pakistan Army - Drone/Missle,India,,30.9135,75.8291,B
-20,07-May-25,20:30,Bathinda,Pakistan Army - Drone/Missle,India,,30.2093,74.9939,C
-21,07-May-25,20:30,Nal Bikaner,Pakistan Army - Drone/Missle,India,,28.0526,73.2069,D
-22,07-May-25,20:30,Phalodi,Pakistan Army - Drone/Missle,India,,27.1203,72.3837,E
-23,07-May-25,20:30,Uttarlai,Pakistan Army - Drone/Missle,India,,25.8057,71.4661,D
-24,07-May-25,20:30,Bhuj,Pakistan Army - Drone/Missle,India,,23.2226,69.6693,C
-25,07-May-25,13:30,Kupwara,Pakistan Army - Shelling,India,,34.5234,74.2536,C
-26,07-May-25,13:30,Baramulla,Pakistan Army - Shelling,India,,34.2035,74.3425,D
-27,07-May-25,13:30,Uri,Pakistan Army - Shelling,India,,34.088,74.0333,B
-28,07-May-25,13:30,Poonch,Pakistan Army - Shelling,India,,33.7631,74.0834,E
-29,07-May-25,13:30,Mendhar ,Pakistan Army - Shelling,India,,33.6066,74.1418,A
-30,07-May-25,13:30,Rajouri,Pakistan Army - Shelling,India,,33.3749,74.3149,D
-31,08-May-25,03:40,Attock,Indian Armed Forces,Pakistan,,33.7677,72.358,
-32,08-May-25,03:40,Rawalpindi,Indian Armed Forces,Pakistan,,33.5756,73.0401,
-33,08-May-25,03:40,Chakwal,Indian Armed Forces,Pakistan,,32.9267,72.8396,
-34,08-May-25,03:40,Gujranwala,Indian Armed Forces,Pakistan,,32.2134,74.1512,
-35,08-May-25,03:40,Lahore,Indian Armed Forces,Pakistan,,31.523,74.4279,
-36,08-May-25,03:40,Walton,Indian Armed Forces,Pakistan,,31.4318,74.3751,
-37,08-May-25,03:40,Bahawalpur ,Indian Armed Forces,Pakistan,,29.3688,71.6779,
-38,08-May-25,03:40,Meaneh,Indian Armed Forces,Pakistan,,27.307,69.2672,
-39,08-May-25,03:40,Karachi,Indian Armed Forces,Pakistan,,24.9391,67.2074,
-40,08-May-25,03:40,Chhor,Indian Armed Forces,Pakistan,,25.5143,69.7843,
-41,08-May-25,13:30,Tangdhar,Pakistan Army - Shelling,India,,34.4003,73.8611,
-42,08-May-25,13:30,Uri,Pakistan Army - Shelling,India,,34.088,74.0333,
-43,08-May-25,13:30,Poonch,Pakistan Army - Shelling,India,,33.7631,74.0834,
-44,08-May-25,13:30,Mendhar ,Pakistan Army - Shelling,India,,33.6066,74.1418,
-45,08-May-25,13:30,Rajouri,Pakistan Army - Shelling,India,,33.3749,74.3149,
-46,08-May-25,13:30,Akhnoor,Pakistan Army - Shelling,India,,32.8982,74.7345,
-47,08-May-25,13:30,Udhampur,Pakistan Army - Shelling,India,,32.9152,75.1422,
-48,09-May-25,01:00,Srinagar,Pakistan Army - Drone/Missle,India,,34.0783,74.7769,
-49,09-May-25,01:00,Naliya,Pakistan Army - Drone/Missle,India,,23.2122,68.8718,
-50,09-May-25,01:00,Udhampur,Pakistan Army - Drone/Missle,India,,32.9152,75.1422,
-51,09-May-25,01:00,Pathankhot,Pakistan Army - Drone/Missle,India,,32.2635,75.6378,
-52,09-May-25,01:00,Adampur,Pakistan Army - Drone/Missle,India,,31.4363,75.7142,
-53,09-May-25,01:00,Bhuj,Pakistan Army - Drone/Missle,India,,23.2226,69.6693,
-54,09-May-25,01:00,Avantipura,Pakistan Army - Drone/Missle,India,,33.9271,75.0094,
-55,09-May-25,01:00,Ferozepur,Pakistan Army - Drone/Missle,India,,30.9128,74.6275,
-56,09-May-25,01:00,Jalandhar,Pakistan Army - Drone/Missle,India,,31.2906,75.607,
-57,09-May-25,13:30,Rajouri,Pakistan Army - Shelling,India,,33.3749,74.3149,
-58,09-May-25,13:30,Kupwara,Pakistan Army - Shelling,India,,34.5234,74.2536,
-59,09-May-25,13:30,Baramulla,Pakistan Army - Shelling,India,,34.2035,74.3425,
-60,09-May-25,13:30,Poonch,Pakistan Army - Shelling,India,,33.7631,74.0834,
-61,09-May-25,13:30,Akhnoor,Pakistan Army - Shelling,India,,32.8982,74.7345,
-62,10-May-25,07:30,Rafiqui,Indian Armed Forces,Pakistan,,30.7584,72.2796,
-63,10-May-25,07:30,Muridke,Indian Armed Forces,Pakistan,,31.8034,74.2414,
-64,10-May-25,07:30,Chaklala,Indian Armed Forces,Pakistan,,33.61,73.0937,
-65,10-May-25,07:30,Rahim Yar Khan,Indian Armed Forces,Pakistan,,28.4071,70.291,
-66,10-May-25,07:30,Sukkur,Indian Armed Forces,Pakistan,,27.6957,68.8843,
-67,10-May-25,07:30,Chuinian,Indian Armed Forces,Pakistan,,30.9639,73.963,
-68,10-May-25,07:30,Pasrur,Indian Armed Forces,Pakistan,,32.2608,74.6687,
-69,10-May-25,07:30,Sialkot,Indian Armed Forces,Pakistan,,32.5235,74.5822,
+1,22-Apr-25,13:30,Pahalgam,Terrorists,India,TRUE,34.0068,75.3287,"Lashkar-e-Tayyaba local outpost, The Resistance Front or TRF, attacks Indian tourists in Pahalgam, J&K, and kills 26 civilians."
+2,07-May-25,01:20,Sawai Nala camp - Muzaffarabad,Indian Armed Forces,Terror Camps,TRUE,34.3472,73.5313,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+3,07-May-25,01:20,Syedna Bilal camp - Muzaffarabad,Indian Armed Forces,Terror Camps,TRUE,34.3722,73.5063,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+4,07-May-25,01:20,Abbas camp - Kotli,Indian Armed Forces,Terror Camps,TRUE,33.5218,73.8908,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+5,07-May-25,01:20,Gulpur - Kotli,Indian Armed Forces,Terror Camps,TRUE,33.5468,73.8658,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+6,07-May-25,01:20,Bahawalpur ,Indian Armed Forces,Terror Camps,TRUE,29.134,71.3165,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+7,07-May-25,01:20,Muridke,Indian Armed Forces,Terror Camps,TRUE,31.8158,74.3059,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+8,07-May-25,01:20,Barnala camp in Bhimber ,Indian Armed Forces,Terror Camps,,32.8639,74.2488,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+9,07-May-25,01:20,Mehmoona Joya camp - Sialkot,Indian Armed Forces,Terror Camps,,32.5792,74.4938,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+10,07-May-25,01:20,Sarjal camp - Shakargarh,Indian Armed Forces,Terror Camps,,32.2519,75.1377,Operation Sindoor: Indian Armed Forces strike targets and destroy nine terrorist camps in Pakistan and PoK.
+11,07-May-25,20:30,Srinagar,Pakistan Army - Drone/Missle,India,,34.0783,74.7769,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+12,07-May-25,20:30,Awantipora,Pakistan Army - Drone/Missle,India,,33.9147,75.0152,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+13,07-May-25,20:30,Jammu,Pakistan Army - Drone/Missle,India,,32.7077,74.8737,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+14,07-May-25,20:30,Pathankhot,Pakistan Army - Drone/Missle,India,,32.2635,75.6378,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+15,07-May-25,20:30,Kapurthala,Pakistan Army - Drone/Missle,India,,31.371,75.394,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+16,07-May-25,20:30,Adampur,Pakistan Army - Drone/Missle,India,,31.4363,75.7142,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+17,07-May-25,20:30,Jalandhar,Pakistan Army - Drone/Missle,India,,31.2906,75.607,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+18,07-May-25,20:30,Amritsar,Pakistan Army - Drone/Missle,India,,31.638,74.8282,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+19,07-May-25,20:30,Ludhiana,Pakistan Army - Drone/Missle,India,,30.9135,75.8291,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+20,07-May-25,20:30,Bathinda,Pakistan Army - Drone/Missle,India,,30.2093,74.9939,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+21,07-May-25,20:30,Nal Bikaner,Pakistan Army - Drone/Missle,India,,28.0526,73.2069,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+22,07-May-25,20:30,Phalodi,Pakistan Army - Drone/Missle,India,,27.1203,72.3837,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+23,07-May-25,20:30,Uttarlai,Pakistan Army - Drone/Missle,India,,25.8057,71.4661,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+24,07-May-25,20:30,Bhuj,Pakistan Army - Drone/Missle,India,,23.2226,69.6693,"Pakistan attempts drone and missile attacks on multiple Indian military targets, which are neutrlised by India."
+25,07-May-25,13:30,Kupwara,Pakistan Army - Shelling,India,,34.5234,74.2536,"Pakistan begins heavy shelling across LoC, using mortar and heavy-caliber artillery. This results in 16 civilian deaths and 59 injuries in India by May 8."
+26,07-May-25,13:30,Baramulla,Pakistan Army - Shelling,India,,34.2035,74.3425,"Pakistan begins heavy shelling across LoC, using mortar and heavy-caliber artillery. This results in 16 civilian deaths and 59 injuries in India by May 8."
+27,07-May-25,13:30,Uri,Pakistan Army - Shelling,India,,34.088,74.0333,"Pakistan begins heavy shelling across LoC, using mortar and heavy-caliber artillery. This results in 16 civilian deaths and 59 injuries in India by May 8."
+28,07-May-25,13:30,Poonch,Pakistan Army - Shelling,India,,33.7631,74.0834,"Pakistan begins heavy shelling across LoC, using mortar and heavy-caliber artillery. This results in 16 civilian deaths and 59 injuries in India by May 8."
+29,07-May-25,13:30,Mendhar,Pakistan Army - Shelling,India,,33.6066,74.1418,"Pakistan begins heavy shelling across LoC, using mortar and heavy-caliber artillery. This results in 16 civilian deaths and 59 injuries in India by May 8."
+30,07-May-25,13:30,Rajouri,Pakistan Army - Shelling,India,,33.3749,74.3149,"Pakistan begins heavy shelling across LoC, using mortar and heavy-caliber artillery. This results in 16 civilian deaths and 59 injuries in India by May 8."
+31,08-May-25,03:40,Attock,Indian Armed Forces,Pakistan,,33.7677,72.358,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+32,08-May-25,03:40,Rawalpindi,Indian Armed Forces,Pakistan,,33.5756,73.0401,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+33,08-May-25,03:40,Chakwal,Indian Armed Forces,Pakistan,,32.9267,72.8396,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+34,08-May-25,03:40,Gujranwala,Indian Armed Forces,Pakistan,,32.2134,74.1512,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+35,08-May-25,03:40,Lahore,Indian Armed Forces,Pakistan,,31.523,74.4279,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+36,08-May-25,03:40,Walton,Indian Armed Forces,Pakistan,,31.4318,74.3751,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+37,08-May-25,03:40,Bahawalpur ,Indian Armed Forces,Pakistan,,29.3688,71.6779,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+38,08-May-25,03:40,Meaneh,Indian Armed Forces,Pakistan,,27.307,69.2672,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+39,08-May-25,03:40,Karachi,Indian Armed Forces,Pakistan,,24.9391,67.2074,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+40,08-May-25,03:40,Chhor,Indian Armed Forces,Pakistan,,25.5143,69.7843,Indian Armed Forces targeted Air Defence radars and systems at a number of locations in Pakistan.
+41,08-May-25,13:30,Tangdhar,Pakistan Army - Shelling,India,,34.4003,73.8611,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+42,08-May-25,13:30,Uri,Pakistan Army - Shelling,India,,34.088,74.0333,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+43,08-May-25,13:30,Poonch,Pakistan Army - Shelling,India,,33.7631,74.0834,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+44,08-May-25,13:30,Mendhar ,Pakistan Army - Shelling,India,,33.6066,74.1418,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+45,08-May-25,13:30,Rajouri,Pakistan Army - Shelling,India,,33.3749,74.3149,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+46,08-May-25,13:30,Akhnoor,Pakistan Army - Shelling,India,,32.8982,74.7345,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+47,08-May-25,13:30,Udhampur,Pakistan Army - Shelling,India,,32.9152,75.1422,Pakistani artillery shelling and armed drone use across LoC. Indian retaliatory fire in response to Pakistani shelling across LoC causes losses to the Pakistan Army.
+48,09-May-25,01:00,Srinagar,Pakistan Army - Drone/Missle,India,,34.0783,74.7769,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+49,09-May-25,01:00,Naliya,Pakistan Army - Drone/Missle,India,,23.2122,68.8718,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+50,09-May-25,01:00,Udhampur,Pakistan Army - Drone/Missle,India,,32.9152,75.1422,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+51,09-May-25,01:00,Pathankhot,Pakistan Army - Drone/Missle,India,,32.2635,75.6378,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+52,09-May-25,01:00,Adampur,Pakistan Army - Drone/Missle,India,,31.4363,75.7142,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+53,09-May-25,01:00,Bhuj,Pakistan Army - Drone/Missle,India,,23.2226,69.6693,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+54,09-May-25,01:00,Avantipura,Pakistan Army - Drone/Missle,India,,33.9271,75.0094,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+55,09-May-25,01:00,Ferozepur,Pakistan Army - Drone/Missle,India,,30.9128,74.6275,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+56,09-May-25,01:00,Jalandhar,Pakistan Army - Drone/Missle,India,,31.2906,75.607,"Pakistan makes air intrusion and attack attempts, these result in limited damage to equipment/personnel at IAF stations."
+57,09-May-25,13:30,Rajouri,Pakistan Army - Shelling,India,,33.3749,74.3149,Pakistan continues drone intrusions and heavy artillery/mortar/small-arm shelling.
+58,09-May-25,13:30,Kupwara,Pakistan Army - Shelling,India,,34.5234,74.2536,Pakistan continues drone intrusions and heavy artillery/mortar/small-arm shelling.
+59,09-May-25,13:30,Baramulla,Pakistan Army - Shelling,India,,34.2035,74.3425,Pakistan continues drone intrusions and heavy artillery/mortar/small-arm shelling.
+60,09-May-25,13:30,Poonch,Pakistan Army - Shelling,India,,33.7631,74.0834,Pakistan continues drone intrusions and heavy artillery/mortar/small-arm shelling.
+61,09-May-25,13:30,Akhnoor,Pakistan Army - Shelling,India,,32.8982,74.7345,Pakistan continues drone intrusions and heavy artillery/mortar/small-arm shelling.
+62,10-May-25,07:30,Rafiqui,Indian Armed Forces,Pakistan,,30.7584,72.2796,"Indian Armed Forces carry out precision attacks on identified Pakistani military targets: technical infrastructure, command and control centres, radar sites, weapon storage areas."
+63,10-May-25,07:30,Muridke,Indian Armed Forces,Pakistan,,31.8034,74.2414,"Indian Armed Forces carry out precision attacks on identified Pakistani military targets: technical infrastructure, command and control centres, radar sites, weapon storage areas."
+64,10-May-25,07:30,Chaklala,Indian Armed Forces,Pakistan,,33.61,73.0937,"Indian Armed Forces carry out precision attacks on identified Pakistani military targets: technical infrastructure, command and control centres, radar sites, weapon storage areas."
+65,10-May-25,07:30,Rahim Yar Khan,Indian Armed Forces,Pakistan,,28.4071,70.291,"Indian Armed Forces carry out precision attacks on identified Pakistani military targets: technical infrastructure, command and control centres, radar sites, weapon storage areas."
+66,10-May-25,07:30,Sukkur,Indian Armed Forces,Pakistan,,27.6957,68.8843,"Indian Armed Forces carry out precision attacks on identified Pakistani military targets: technical infrastructure, command and control centres, radar sites, weapon storage areas."
+67,10-May-25,07:30,Chuinian,Indian Armed Forces,Pakistan,,30.9639,73.963,"Indian Armed Forces carry out precision attacks on identified Pakistani military targets: technical infrastructure, command and control centres, radar sites, weapon storage areas."
+68,10-May-25,07:30,Pasrur,Indian Armed Forces,Pakistan,,32.2608,74.6687,India targets radar sites using precision munitions.
+69,10-May-25,07:30,Sialkot,Indian Armed Forces,Pakistan,,32.5235,74.5822,India targets radar sites using precision munitions.

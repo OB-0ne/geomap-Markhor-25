@@ -159,7 +159,7 @@ function change_date(){
   // set default settings for the map including bounds, active layers
   buffer = 0.7
   if (userIsPhone){
-    map.fitBounds(L.latLngBounds([long_min-2*buffer, lat_min-buffer],[Number(long_max)+buffer, Number(lat_max)+buffer]));
+    map.fitBounds(L.latLngBounds([long_min-2.2*buffer, lat_min-buffer],[Number(long_max)+0.4*buffer, Number(lat_max)+0.2*buffer]));
   } else{
     map.fitBounds(L.latLngBounds([long_min-buffer, lat_min-2*buffer],[Number(long_max)+buffer, Number(lat_max)+buffer]));
   }
@@ -175,6 +175,14 @@ function change_date(){
   // Add a title as the selected date and add it to div
   temp_element = document.createElement('h2');
   temp_element.innerHTML = selected_date;
+  temp_element.setAttribute("style","text-align: center;");
+  popup_info_byDate.appendChild(temp_element);
+
+  temp_element = document.createElement('hr');
+  temp_element.setAttribute("width","70%");
+  temp_element.setAttribute("color","white");
+  temp_element.setAttribute("size","2");
+  temp_element.setAttribute("style","opacity: 0.65");
   popup_info_byDate.appendChild(temp_element);
 
   // make a dictionary where repeated decription is the key and cities as the list of values
@@ -198,6 +206,13 @@ function change_date(){
     temp_element = document.createElement('p');
     temp_element.classList.add('info-popup-cities');
     temp_element.innerHTML = d[1].join(", ");            // the list of values is stored on index 1
+    popup_info_byDate.appendChild(temp_element);
+
+    temp_element = document.createElement('hr');
+    temp_element.setAttribute("width","70%");
+    temp_element.setAttribute("color","white");
+    temp_element.setAttribute("size","2");
+    temp_element.setAttribute("style","opacity: 0.65");
     popup_info_byDate.appendChild(temp_element);
 
   });
