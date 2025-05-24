@@ -18,7 +18,6 @@ function draw_map(){
   var def_Map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
     zoomSnap: 0.1,
-    maxZoom: 11
   });
 
   // make layer grousp for the markers - visist and images
@@ -43,8 +42,6 @@ function draw_map(){
 
   // initialize the control which can be interacted with
   var layerControl = L.control.layers(baseMaps,overlays).addTo(map);
-
-    
 
 }
 
@@ -231,4 +228,5 @@ function toggleGeomapInfoPopup() {
 window.onload = function() {
   document.getElementById('info-popup').classList.remove('hidden');
   L.DomEvent.disableScrollPropagation(document.getElementById('info-popup-byDate'));
+  L.DomEvent.disableClickPropagation(document.getElementById('info-popup-byDate'));
 };

@@ -140,6 +140,9 @@
         top: 70%;
         margin: 10px;
     }
+    .map-date-slider-name{
+        width: 15%;
+    }
 }
 
 /* Map Controls UI */
@@ -160,7 +163,7 @@
 
 .map-date-slider-name{
     display: inline-block;
-    width: 15%;
+    width: 16%;
     text-align: center;
     padding: 3px;
 }
