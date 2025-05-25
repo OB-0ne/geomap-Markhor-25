@@ -91,7 +91,7 @@ function makeBoundaryPoly(){
       list.push([d.lat,d.long])
     });
     
-    L.polygon(list, {color: 'green'}).addTo(borderMark_Layer);
+    L.polygon(list, {color: '#21ad02'}).addTo(borderMark_Layer);
   });
 
   d3.csv("data/country_shapes/ind.csv", function(err, data) {
@@ -102,7 +102,7 @@ function makeBoundaryPoly(){
       list.push([d.lat,d.long])
     });
     
-    L.polygon(list, {color: 'orange'}).addTo(borderMark_Layer);
+    L.polygon(list, {color: '#f59b00'}).addTo(borderMark_Layer);
   });
 
   d3.csv("data/country_shapes/pok.csv", function(err, data) {
@@ -138,12 +138,12 @@ function change_date(){
   cons.forEach(function(d) {
     var c_col = 'red'
     if (d.By == 'Indian Armed Forces'){
-      c_col = 'orange';
+      c_col = '#c404ae';
     }
     else if(d.By.includes("Pakistan Army")){
-      c_col = 'green';
+      c_col = '#189100';
     }
-    var marker = L.circle([d.loc_x, d.loc_y], 4000,{color: c_col}).addTo(conflictMark_Layer);
+    var marker = L.circle([d.loc_x, d.loc_y], 5000,{color: c_col}).addTo(conflictMark_Layer);
       marker.bindTooltip(d.LocName);
   });
 
